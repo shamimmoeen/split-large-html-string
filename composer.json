@@ -1,0 +1,16 @@
+{
+  "name": "shamimmoeen/split-large-html-string",
+  "description": "Split the large html string into parts based on the given length",
+  "type": "library",
+  "license": "GPL-3.0+",
+  "authors": [
+    {
+      "name": "Mainul Hassan Main",
+      "email": "shamim.moeen@gmail.com"
+    }
+  ],
+  "require": {},
+  "require-dev": {
+    "phpunit/phpunit": "^8"
+  }
+}
