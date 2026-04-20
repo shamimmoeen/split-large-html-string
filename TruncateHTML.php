@@ -106,7 +106,7 @@ class TruncateHTML
     {
         $this->content = $content;
         $this->set_lines_splitted_by_html_tags(
-            $this->get_splittted_by_html_tags($this->content)
+            $this->get_splitted_by_html_tags($this->content)
         );
     }
 
@@ -157,7 +157,7 @@ class TruncateHTML
      *
      * @return array
      */
-    public function get_splittted_by_html_tags($string)
+    public function get_splitted_by_html_tags($string)
     {
         preg_match_all('/(<.+?>)?([^<>]*)/s', $string, $lines, PREG_SET_ORDER);
 
@@ -308,7 +308,7 @@ class TruncateHTML
                 $length += $content_length;
             }
 
-            $tag = "</${parent_tag}>";
+            $tag = "</{$parent_tag}>";
 
             $last_index = $index;
 
