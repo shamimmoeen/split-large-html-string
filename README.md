@@ -4,15 +4,35 @@ A PHP library that splits or truncates large HTML strings into smaller parts bas
 
 ## Installation
 
-```bash
-composer require shamimmoeen/split-large-html-string
+### Direct include
+
+```php
+require_once 'path/to/TruncateHTML.php';
 ```
+
+### Via Composer (GitHub repository)
+
+Add the repository to your `composer.json`:
+
+```json
+{
+  "repositories": [
+    {
+      "type": "vcs",
+      "url": "https://github.com/shamimmoeen/split-large-html-string"
+    }
+  ],
+  "require": {
+    "shamimmoeen/split-large-html-string": "dev-master"
+  }
+}
+```
+
+Then run `composer install`.
 
 ## Usage
 
 ```php
-require_once 'vendor/autoload.php';
-
 $truncate = new TruncateHTML();
 $truncate->set_length(80);       // Target split length (characters of plain text)
 $truncate->set_max_length(100);  // Maximum allowed length before forcing a split
@@ -48,7 +68,7 @@ The library splits at parent-element boundaries, so each chunk contains complete
 
 ```bash
 composer install
-./vendor/bin/phpunit --testdox TestTruncateHTML.php
+composer test
 ```
 
 ## License
